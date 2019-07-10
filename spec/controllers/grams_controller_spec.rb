@@ -22,7 +22,7 @@ RSpec.describe GramsController, type: :controller do
       post :create, params: { gram: { message: 'Hello!'}}
       expect(response).to redirect_to root_path
 
-      gran = Gram.last
+      gram = Gram.last
       expect(gram.message).to eq('Hello!')
 
 
